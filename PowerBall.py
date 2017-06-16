@@ -29,6 +29,11 @@ class PowerBall:
 		self.add_duplicate_counts(emp)
 
 	def select_winning_number(self):
+		# wipe any changes to these attributes before determining winning number
+		self.winning_powerball = None
+		self.winning_numbers = []
+		self.winner = None
+
 		self.choose_winning_powerball()
 		self.choose_winning_numbers()
 		self.find_winner()
